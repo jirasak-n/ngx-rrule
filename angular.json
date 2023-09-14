@@ -14,13 +14,13 @@
           "options": {
             "tsConfig": "projects/ngx-rrule/tsconfig.lib.json",
             "project": "projects/ngx-rrule/ng-package.json"
-          }
-        ,          "configurations": {
+          },
+          "configurations": {
             "production": {
               "tsConfig": "projects/ngx-rrule/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -177,5 +177,8 @@
       }
     }
   },
-  "defaultProject": "ngx-rrule"
+  "defaultProject": "ngx-rrule",
+  "cli": {
+    "analytics": false
+  }
 }

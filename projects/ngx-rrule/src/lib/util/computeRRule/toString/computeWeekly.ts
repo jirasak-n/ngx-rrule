@@ -1,4 +1,4 @@
-import RRule from 'rrule';
+import {RRule} from 'rrule';
 import * as _ from 'lodash';
 
 const computeWeekly = ({ interval, days }) => ({
