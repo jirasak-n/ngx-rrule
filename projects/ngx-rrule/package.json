@@ -1,6 +1,6 @@
 {
   "name": "ngx-rrule",
-  "version": "0.9.1",
+  "version": "0.17.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/kumar-muthu/ngx-rrule.git"
@@ -10,10 +10,10 @@
   "author": "",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^9.1.12",
-    "@angular/core": "^9.1.12",
-    "@angular/localize": "^9.1.12",
-    "@ng-bootstrap/ng-bootstrap": "^6.2.0",
+    "@angular/common": "^17.3.5",
+    "@angular/core": "^17.3.5",
+    "@angular/localize": "^17.3.5",
+    "@ng-bootstrap/ng-bootstrap": "^16.0.0",
     "lodash": "^4.17.15",
     "rrule": "^2.7.2"
   },
