@@ -1,6 +1,6 @@
 import { MONTHS } from '../constant';
 
-const computeYearlyOnTheMonth = (data, rruleObj) => {
+const computeYearlyOnTheMonth = (data: any, rruleObj: any) => {
   if (rruleObj.freq !== 0 || !rruleObj.byweekday) {
     return data.repeat.yearly.onThe.month;
   }

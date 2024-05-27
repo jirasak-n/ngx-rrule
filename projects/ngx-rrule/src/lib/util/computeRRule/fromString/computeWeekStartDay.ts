@@ -1,4 +1,4 @@
-const computeWeekStartDay = (data, rruleObj) => {
+const computeWeekStartDay = (data: any, rruleObj: any) => {
   if (!rruleObj.wkst) {
     return data.options.weekStartsOnSunday;
   }

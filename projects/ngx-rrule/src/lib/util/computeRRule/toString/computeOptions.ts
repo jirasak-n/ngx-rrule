@@ -1,6 +1,6 @@
 import {RRule} from 'rrule';
 
-const computeOptions = ({ hideStart, weekStartsOnSunday, tz }) => {
+const computeOptions = ({ hideStart, weekStartsOnSunday, tz }: { hideStart: boolean, weekStartsOnSunday: boolean, tz: string }) => {
   const options: any = {};
 
   if (hideStart) {

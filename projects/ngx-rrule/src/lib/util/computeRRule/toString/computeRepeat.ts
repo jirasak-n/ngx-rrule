@@ -8,7 +8,14 @@ const computeRepeat = ({
   frequency,
   yearly,
   monthly,
-  weekly, interval
+  weekly,
+  interval
+}: {
+  frequency: string,
+  yearly: any,
+  monthly: any,
+  weekly: any,
+  interval: number
 }) => {
   switch (frequency) {
     case 'Yearly': {

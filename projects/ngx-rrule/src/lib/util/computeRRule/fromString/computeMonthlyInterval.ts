@@ -1,4 +1,4 @@
-const computeMonthlyInterval = (data, rruleObj) => {
+const computeMonthlyInterval = (data: any, rruleObj: any) => {
   if (rruleObj.freq !== 1) {
     return data.repeat.monthly.interval;
   }

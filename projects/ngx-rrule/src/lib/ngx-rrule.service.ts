@@ -9,7 +9,7 @@ export class NgxRruleService {
 
   }
 
-  computeRRule(params) {
+  computeRRule(params: any) {
     return computeRRule(params);
   }
 }

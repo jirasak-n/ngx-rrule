@@ -6,11 +6,11 @@ export const getDateParts = (date: Date) => {
   } : {};
 }
 
-export const  isValidDate = (d) => {
+export const  isValidDate = (d: any) => {
   return !isNaN(d) && d instanceof Date;
 }
 
-export const formatDate = (date) => {
+export const formatDate = (date: any) => {
   return date;
   var d = new Date(date),
     month = '' + (d.getMonth() + 1),

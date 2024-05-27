@@ -1,4 +1,4 @@
-const computeMonthlyOn = on => ({
+const computeMonthlyOn = (on: any) => ({
   bymonthday: on.day,
 });
 

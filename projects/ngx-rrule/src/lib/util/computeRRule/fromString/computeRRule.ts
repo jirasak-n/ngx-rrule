@@ -24,7 +24,7 @@ import computeEndAfter from './computeEndAfter';
 import computeEndOnDate from './computeEndOnDate';
 import {formatDate} from "../../common";
 
-export const computeRRule = (data, rrule) => {
+export const computeRRule = (data: any, rrule: any) => {
   if (!rrule) {
     return data;
   }

@@ -10,6 +10,11 @@ export const computeRRule = ({
   repeat,
   end,
   options,
+}: {
+  start: any,
+  repeat: any,
+  end: any,
+  options: any,
 }) => {
   const rruleObject = {
     ...computeStart(start),

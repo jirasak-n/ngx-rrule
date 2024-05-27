@@ -1,4 +1,4 @@
-const computeEndMode = (data, rruleObj) => {
+const computeEndMode = (data: any, rruleObj: any) => {
   if (rruleObj.count || rruleObj.count === 0) {
     return 'After';
   }

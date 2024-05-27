@@ -1,6 +1,6 @@
 import {getDateParts, isValidDate} from "../../common";
 
-const computeEnd = (attr) => {
+const computeEnd = (attr: any) => {
   const end: any = {};
 
   if (attr) {
@@ -12,7 +12,9 @@ const computeEnd = (attr) => {
 
     if (mode === 'On date' && isValidDate(date)) {
       const dateParts = getDateParts(date);
-      end.until = new Date(Date.UTC(dateParts.year, dateParts.month - 1, dateParts.day, 23, 59, 59, 999));
+      if (dateParts.month !== undefined) {
+        end.until = new Date(Date.UTC(dateParts.year, dateParts.month - 1, dateParts.day, 23, 59, 59, 999));
+      }
     }
   }
 

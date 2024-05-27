@@ -8,6 +8,11 @@ const computeMonthly = ({
   interval,
   on,
   onThe,
+}: {
+  mode: string,
+  interval: number,
+  on: number,
+  onThe: string,
 }) => ({
   freq: RRule.MONTHLY,
   interval,

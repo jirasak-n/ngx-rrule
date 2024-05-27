@@ -12,10 +12,12 @@ import {formatDate} from "../../util/common";
 export class StartComponent implements OnInit, ControlValueAccessor {
   @Output() onChange = new EventEmitter();
   public form: FormGroup;
-  public startDate;
-  private propagateChange;
+  public startDate: any;
+  private propagateChange: any;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({});
+  }
 
   ngOnInit() {
     this.form = this.formBuilder.group({

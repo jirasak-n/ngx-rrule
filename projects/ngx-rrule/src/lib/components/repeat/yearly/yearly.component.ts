@@ -11,9 +11,11 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 export class YearlyComponent implements OnInit, ControlValueAccessor {
   @Output() onChange = new EventEmitter();
   public form: FormGroup;
-  private propagateChange;
+  private propagateChange: any;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({});
+  }
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -57,5 +59,5 @@ export class YearlyComponent implements OnInit, ControlValueAccessor {
     this.onChange.emit();
   }
 
-  public range = (start, end) => Array.from({length: (end - start)}, (v, k) => k + start);
+  public range = (start: number, end: number) => Array.from({length: (end - start)}, (v, k) => k + start);
 }

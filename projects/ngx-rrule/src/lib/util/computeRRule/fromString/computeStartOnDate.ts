@@ -1,4 +1,4 @@
-const computeStartOnDate = (data, rruleObj) => {
+const computeStartOnDate = (data: any, rruleObj: any) => {
   if (!rruleObj.dtstart) {
     return data.start.onDate.date;
   }

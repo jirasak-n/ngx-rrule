@@ -1,4 +1,4 @@
-const computeEndOnDate = (data, rruleObj) => {
+const computeEndOnDate = (data: any, rruleObj: any) => {
   if (!rruleObj.until) {
     return data.end.onDate.date;
   }

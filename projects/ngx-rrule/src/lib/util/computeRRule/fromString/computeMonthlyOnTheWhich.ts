@@ -1,4 +1,4 @@
-const computeMonthlyOnTheWhich = (data, rruleObj) => {
+const computeMonthlyOnTheWhich = (data: any, rruleObj: any) => {
   if (rruleObj.freq !== 1 || !rruleObj.bysetpos) {
     return data.repeat.monthly.onThe.which;
   }

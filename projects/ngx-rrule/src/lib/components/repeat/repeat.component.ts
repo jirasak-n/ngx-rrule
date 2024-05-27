@@ -10,9 +10,11 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR, FormBuilder, FormGroup } from 
 export class RepeatComponent implements OnInit, ControlValueAccessor {
   @Output() onChange = new EventEmitter();
   public form: FormGroup;
-  @Input() frequency;
-  private propagateChange;
-  constructor(private formBuilder: FormBuilder) { }
+  @Input() frequency: string = 'Weekly';
+  private propagateChange: any;
+  constructor(private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({});
+  }
 
   ngOnInit() {
     this.form = this.formBuilder.group({

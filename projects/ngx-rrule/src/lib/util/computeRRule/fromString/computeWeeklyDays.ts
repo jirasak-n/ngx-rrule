@@ -1,4 +1,4 @@
-const computeWeeklyDays = (data, rruleObj) => {
+const computeWeeklyDays = (data: any, rruleObj: any) => {
   let weekdays = [];
 
   if (rruleObj.freq !== 2) {
@@ -6,7 +6,7 @@ const computeWeeklyDays = (data, rruleObj) => {
   }
 
   if (rruleObj.byweekday) {
-    weekdays = rruleObj.byweekday.map(weekday => weekday.weekday);
+    weekdays = rruleObj.byweekday.map((weekday: any) => weekday.weekday);
   }
 
   return {

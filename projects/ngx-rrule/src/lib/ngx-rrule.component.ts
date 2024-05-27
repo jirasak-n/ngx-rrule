@@ -13,14 +13,16 @@ import {formatDate, getDateParts} from '../lib/util/common';
 export class NgxRruleComponent implements OnInit, OnChanges, ControlValueAccessor {
   @Input() hideStart = false;
   @Input() hideEnd = false;
-  @Input() startAt;
-  @Input() endAt;
-  @Input() frequency;
-  @Input() tz;
+  @Input() startAt?: Date;
+  @Input() endAt?: Date;
+  @Input() frequency: any;
+  @Input() tz: any;
   public form: FormGroup;
-  private propagateChange;
+  private propagateChange: any;
   constructor(private formBuilder: FormBuilder,
-    private service: NgxRruleService) { }
+    private service: NgxRruleService) {
+    this.form = this.formBuilder.group({});
+     }
 
   ngOnInit() {
     const params: any = {

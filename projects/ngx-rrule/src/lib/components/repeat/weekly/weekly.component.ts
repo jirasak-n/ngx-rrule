@@ -12,9 +12,11 @@ import * as _ from 'lodash';
 export class WeeklyComponent implements OnInit, ControlValueAccessor {
   @Output() onChange = new EventEmitter();
   public weeklyForm: FormGroup;
-  private propagateChange;
+  private propagateChange: any;
   public days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) {
+    this.weeklyForm = this.formBuilder.group({});
+  }
 
   ngOnInit() {
     this.weeklyForm = this.formBuilder.group({
@@ -57,7 +59,7 @@ export class WeeklyComponent implements OnInit, ControlValueAccessor {
       };
 
       value.interval = this.weeklyForm.value.weeklyInterval;
-      value.days = _.omit(this.weeklyForm.value, ['weeklyInterval']);
+      value.days = _.omit(this.weeklyForm.value, ['weeklyInterval']) as any;
       this.propagateChange(value);
       this.onChange.emit();
     }

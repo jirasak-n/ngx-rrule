@@ -1,4 +1,4 @@
-const computeYearlyMode = (data, rruleObj) => {
+const computeYearlyMode = (data: any, rruleObj: any) => {
   if (rruleObj.freq !== 0 || !rruleObj.bymonth) {
     return data.repeat.yearly.mode;
   }

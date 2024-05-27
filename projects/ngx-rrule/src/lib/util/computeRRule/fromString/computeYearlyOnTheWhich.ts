@@ -1,4 +1,4 @@
-const computeYearlyOnTheWhich = (data, rruleObj) => {
+const computeYearlyOnTheWhich = (data: any, rruleObj: any) => {
   if (rruleObj.freq !== 0 || !rruleObj.byweekday) {
     return data.repeat.yearly.onThe.which;
   }

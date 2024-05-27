@@ -1,9 +1,9 @@
-const computeMonthlyOnTheDay = (data, rruleObj) => {
+const computeMonthlyOnTheDay = (data: any, rruleObj: any) => {
   if (rruleObj.freq !== 1 || !rruleObj.byweekday) {
     return data.repeat.monthly.onThe.day;
   }
 
-  const weekdays = rruleObj.byweekday.map(weekday => weekday.weekday).join(',');
+  const weekdays = rruleObj.byweekday.map((weekday: any) => weekday.weekday).join(',');
 
   switch (weekdays) {
     case '0': {

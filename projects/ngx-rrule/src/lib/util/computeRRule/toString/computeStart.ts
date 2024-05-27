@@ -1,6 +1,6 @@
 import {getDateParts, isValidDate} from '../../common'
 
-const computeStart = (date) => {
+const computeStart = (date: any) => {
   let start: any = {};
 
   if (date) {
@@ -10,6 +10,10 @@ const computeStart = (date) => {
       start = date.onDate.date;
     }
     const dateParts = getDateParts(start);
+    if (!dateParts.year || !dateParts.month || !dateParts.day) {
+      return null;
+    }
+
     return {
       dtstart: new Date(Date.UTC(dateParts.year, dateParts.month - 1, dateParts.day, 0, 0))
     };

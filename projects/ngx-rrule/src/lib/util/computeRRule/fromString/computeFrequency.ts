@@ -1,4 +1,4 @@
-const computeFrequency = (data, rruleObj) => {
+const computeFrequency = (data: any, rruleObj: any) => {
   switch (rruleObj.freq) {
     case 0: {
       return 'Yearly';
