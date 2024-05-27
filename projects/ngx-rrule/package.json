@@ -2,10 +2,6 @@
   "name": "ngx-rrule",
   "version": "0.0.1",
   "description": "Angular component for rrule",
-  "main": "bundles/ngx-rrule.umd.js",
-  "module": "fesm5/ngx-rrule.js",
-  "es2015": "fesm2015/ngx-rrule.js",
-  "typings": "ngx-rrule.d.ts",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0",
