@@ -1,6 +1,6 @@
 {
-  "name": "ngx-rrule",
-  "version": "0.0.1",
+  "name": "ng17-rrule",
+  "version": "17.0.0",
   "description": "Angular component for rrule",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
